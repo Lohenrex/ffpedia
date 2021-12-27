@@ -5,16 +5,16 @@ require_relative "lib/ffpedia/version"
 Gem::Specification.new do |spec|
   spec.name = "ffpedia"
   spec.version = Ffpedia::VERSION
-  spec.authors = ["Alejandro Rebollar \"Lohenrex\""]
+  spec.authors = ["Alejandro Rebollar"]
   spec.email = ["lohenrex.ragnarok@gmail.com"]
 
-  spec.summary = "CRUD application for the Final Fantasy API at www.moogleapi.com"
-  spec.description = "Web client for performing CRUD operations on the Final Fantasy API at www.moogleapi.com"
+  spec.summary = "Wrapper for the Final Fantasy API at www.moogleapi.com"
+  spec.description = "Wrapper for the Final Fantasy API at www.moogleapi.com"
   spec.homepage = "https://github.com/Lohenrex/ffpedia"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.0.0"
 
-  spec.metadata["allowed_push_host"] = "https://github.com/Lohenrex/ffpedia"
+  # spec.metadata["allowed_push_host"] = "TODO: Set to your gem server 'https://example.com'"
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "https://github.com/Lohenrex/ffpedia"
