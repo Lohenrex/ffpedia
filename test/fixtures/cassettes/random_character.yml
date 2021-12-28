@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moogleapi.com/api/v1/characters/random
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.moogleapi.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 28 Dec 2021 23:09:24 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '711'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Request-Context:
+      - appId=cid-v1:a44d0651-3c25-4ba9-874e-02b519cfb8ae
+      Strict-Transport-Security:
+      - max-age=2592000
+      Api-Supported-Versions:
+      - '1'
+      X-Powered-By:
+      - ASP.NET
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=H4y4xWLVc%2BXasavc5wdFoMwlLYXTYrJI7POFyqGdIVvPhWJ2NJOXSQEdCEeRDaHu%2BQkXrvLdrNNnWcIYjVp2%2F96jmaMk%2BPjKttN9JmARaD3kiTFPJsrFBN2rt%2Fd5VzfLT7ucVw%3D%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6c4e74c2aa545223-MEX
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443";
+        ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"8fdd0a98-5533-4550-fa67-08d850052414","name":"Cerius","japaneseName":null,"age":"??","gender":"Female","race":"Human","job":"Green
+        Mage","height":"??","weight":"??","origin":"Final Fantasy BE","description":"A
+        green mage born in a certain country which sought to produce mages for the
+        sole purpose of aiding others in battle. Cerius was an orphan trained exclusively
+        in magic by the state, which led her to grow a bit indifferent towards people.
+        However, she was always keenly aware of her surroundings and thus managed
+        to retain her empathy, unlike her desensitized fellow green mages. She later
+        fled the country, but no records of her reasons behind this act remain.","pictures":[{"id":"cf66b57c-a3c1-4149-8b83-08d850052b8b","url":"https://mooglestorage.blob.core.windows.net/images/cf66b57c-a3c1-4149-8b83-08d850052b8b.jpg","primary":1,"collectionId":"8fdd0a98-5533-4550-fa67-08d850052414"}],"stats":[]}'
+  recorded_at: Tue, 28 Dec 2021 23:09:24 GMT
+recorded_with: VCR 6.0.0

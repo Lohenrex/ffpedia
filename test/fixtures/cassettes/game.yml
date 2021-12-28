@@ -1,0 +1,91 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moogleapi.com/api/v1/games/9fc1c377-95f1-4a09-399f-08d6b0a627a3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.moogleapi.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 28 Dec 2021 23:09:23 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1579'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Request-Context:
+      - appId=cid-v1:a44d0651-3c25-4ba9-874e-02b519cfb8ae
+      Strict-Transport-Security:
+      - max-age=2592000
+      Api-Supported-Versions:
+      - '1'
+      X-Powered-By:
+      - ASP.NET
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=v19qakEBqO1skvmFAGsnOTYp1oxrvPeT4mB3swl7JpV2DZAMcLPkv0uFyLCyaeCmPTWeLVv7bMbcJl75loDBsGmvlAlo4WwGZcHdGJHrB6XVMerQTIKgZj3O71eOjw6MLfT%2Fpg%3D%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6c4e74bbf9b1525f-MEX
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443";
+        ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"gameId":"9fc1c377-95f1-4a09-399f-08d6b0a627a3","title":"Final Fantasy
+        07","picture":"https://jackfperryjr.github.io/moogleapi-images/logos/ff07.jpg","platform":"Sony
+        Playstation","releaseDate":"January 31, 1997","description":"The seventh main
+        installment in the Final Fantasy series. Published in Japan by Square, it
+        was released in other regions by Sony Computer Entertainment, and became the
+        first in the main series to see a PAL release. The game''s story follows Cloud
+        Strife, a mercenary who joins an eco-terrorist organization to stop a world-controlling
+        mega-corporation from using the planet''s life essence as an energy source.
+        Events send Cloud and his allies in pursuit of Sephiroth, a superhuman intent
+        on destroying their planet. During the journey, Cloud builds close friendships
+        with his party members, including Aerith Gainsborough, who holds the secret
+        to saving their world.\r\n\r\nDevelopment began in 1994, originally for the
+        Super NES. After delays and technical difficulties from experimenting on several
+        platforms, Square moved production to the PlayStation, largely due to the
+        advantages of the CD-ROM format. Veteran Final Fantasy staff returned, including
+        series creator and producer Hironobu Sakaguchi, director Yoshinori Kitase,
+        and composer Nobuo Uematsu. The title became the first in the series to use
+        full motion video and 3D computer graphics, which featured 3D character models
+        superimposed over 2D pre-rendered backgrounds. Although the gameplay systems
+        remained mostly unchanged from previous entries, Final Fantasy VII introduced
+        more widespread science fiction elements and a more realistic presentation.
+        The game had a staff of over 100, with a combined development and marketing
+        budget of around US$80 million.\r\n\r\nAssisted by a large promotional campaign,
+        Final Fantasy VII received widespread commercial and critical success, and
+        remains widely regarded as a landmark title and one of the greatest games
+        of all time. The title won numerous Game of the Year awards, and was acknowledged
+        for boosting the sales of the PlayStation and popularizing Japanese role-playing
+        games worldwide. Critics praised its graphics, gameplay, music, and story,
+        although some criticism was directed towards its English localization. Its
+        success has led to enhanced ports on various platforms, a multimedia sub-series
+        called the Compilation of Final Fantasy VII, and an upcoming high-definition
+        remake for the PlayStation 4."}]'
+  recorded_at: Tue, 28 Dec 2021 23:09:23 GMT
+recorded_with: VCR 6.0.0

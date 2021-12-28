@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moogleapi.com/api/v1/characters/66000ff6-e1ab-40a8-0fdc-08d6afcab3e2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.moogleapi.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 28 Dec 2021 23:09:30 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '964'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Request-Context:
+      - appId=cid-v1:a44d0651-3c25-4ba9-874e-02b519cfb8ae
+      Strict-Transport-Security:
+      - max-age=2592000
+      Api-Supported-Versions:
+      - '1'
+      X-Powered-By:
+      - ASP.NET
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=t%2BLpE9OMmQSEFo7S5IVrZje2wsvemOjhq30xH9PevAHrOoTDMNOr83n%2BI%2F5pyv7usKU85YfoMZLwV%2BbappwkPC2mY5wNLz8406H5mB8W6ccwUfvxUAMt%2FzZa%2FUyJffy4YBfOWQ%3D%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6c4e74e60b5b5295-LAX
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443";
+        ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3siaWQiOiI2NjAwMGZmNi1lMWFiLTQwYTgtMGZkYy0wOGQ2YWZjYWIzZTIiLCJuYW1lIjoiQ2xvdWQiLCJqYXBhbmVzZU5hbWUiOm51bGwsImFnZSI6IjIxIiwiZ2VuZGVyIjoiTWFsZSIsInJhY2UiOiJIdW1hbiIsImpvYiI6IlNPTERJRVIiLCJoZWlnaHQiOiIxLjczIiwid2VpZ2h0IjoiPz8iLCJvcmlnaW4iOiJGaW5hbCBGYW50YXN5IFZJSSIsImRlc2NyaXB0aW9uIjoiQ2xvdWQgU3RyaWZlICjjgq/jg6njgqbjg4njg7vjgrnjg4jjg6njgqTjg5UgS3VyYXVkbyBTdXRvcmFpZnUpIGlzIHRoZSBtYWluIHByb3RhZ29uaXN0IGluIEZpbmFsIEZhbnRhc3kgVklJIGFuZCBGaW5hbCBGYW50YXN5IFZJSTogQWR2ZW50IENoaWxkcmVuLCBhbmQgYWxzbyBhcHBlYXJzIGluIHRoZSBzcGluLW9mZiBnYW1lcyBvZiB0aGUgQ29tcGlsYXRpb24gb2YgRmluYWwgRmFudGFzeSBWSUksIGluY2x1ZGluZyBEaXJnZSBvZiBDZXJiZXJ1cyAtRmluYWwgRmFudGFzeSBWSUktIGFuZCBDcmlzaXMgQ29yZSAtRmluYWwgRmFudGFzeSBWSUktLCBhcyBhIHN1cHBvcnRpbmcgY2hhcmFjdGVyLiBIZSBpcyB0byBiZSB0aGUgbWFpbiBjaGFyYWN0ZXIgYWdhaW4gZm9yIEZpbmFsIEZhbnRhc3kgVklJIFJlbWFrZS4gQW4gYXJyb2dhbnQgYW5kIHByb3VkIHN3b3Jkc21hbiBhdCBmaXJzdCwgQ2xvdWQgaW50cm9kdWNlcyBoaW1zZWxmIGFzIGEgZm9ybWVyIG1lbWJlciBvZiBhbiBlbGl0ZSB3YXJyaW9yIHVuaXQgY2FsbGVkIFNPTERJRVIgd2hvIGhhcyB0dXJuZWQgbWVyY2VuYXJ5LCBhbmQgdW5pbnRlcmVzdGVkIGluIGFueXRoaW5nIGJleW9uZCBoaXMgaGlyZWQgdGFzayBhdCBoYW5kLiBIZSBsYXRlciBkaXNjb3ZlcnMgdGhlIHRydXRoIGFib3V0IGhpcyBwYXN0IGFuZCwgd2l0aCB0aGUgaGVscCBvZiBoaXMgZnJpZW5kcywgbGVhcm5zIHRoZXJlIGlzIG1vcmUgdG8gYmVpbmcgYSBoZXJvIHRoYW4gcG9zc2Vzc2luZyBwaHlzaWNhbCBzdHJlbmd0aCBhbmQgZmFtZSwgZGV2ZWxvcGluZyBjb21wYXNzaW9uIGZvciB0aGUgd29ybGQgYW5kIHBlb3BsZSBoZSBmaWdodHMgdG8gcHJvdGVjdC4iLCJwaWN0dXJlcyI6W3siaWQiOiJlZTU0MWE2Ni1jOTBiLTQzMGYtODY4NS04ZWY2OGUzYjNhNjEiLCJ1cmwiOiJodHRwczovL21vb2dsZXN0b3JhZ2UuYmxvYi5jb3JlLndpbmRvd3MubmV0L2ltYWdlcy9lZTU0MWE2Ni1jOTBiLTQzMGYtODY4NS04ZWY2OGUzYjNhNjEuanBnIiwicHJpbWFyeSI6MSwiY29sbGVjdGlvbklkIjoiNjYwMDBmZjYtZTFhYi00MGE4LTBmZGMtMDhkNmFmY2FiM2UyIn1dLCJzdGF0cyI6W119XQ==
+  recorded_at: Tue, 28 Dec 2021 23:09:30 GMT
+recorded_with: VCR 6.0.0

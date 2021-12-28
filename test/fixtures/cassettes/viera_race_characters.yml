@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moogleapi.com/api/v1/characters/search?race=Viera
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.moogleapi.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 28 Dec 2021 23:09:22 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1055'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Request-Context:
+      - appId=cid-v1:a44d0651-3c25-4ba9-874e-02b519cfb8ae
+      Strict-Transport-Security:
+      - max-age=2592000
+      Api-Supported-Versions:
+      - '1'
+      X-Powered-By:
+      - ASP.NET
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=w%2B6DJVMDquGPtRdupnvGBLbZaO7jYgsZdcgrwhPS4H7%2BcPtOxvrLx5yBeWig4pBlp3HIrkSWZoqSN%2FddgYr4gudBB51OWeqnm7HblduBghuSPDy4xHx5B5S0it3T%2BAxAL4GJug%3D%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6c4e74b2abec5211-MEX
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443";
+        ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3siaWQiOiJiODY5Yjc2NC1mYThjLTQyYTUtMTAyOC0wOGQ2YWZjYWIzZTIiLCJuYW1lIjoiRnJhbiIsImphcGFuZXNlTmFtZSI6bnVsbCwiYWdlIjoiPz8iLCJnZW5kZXIiOiJGZW1hbGUiLCJyYWNlIjoiVmllcmEiLCJqb2IiOiJTa3kgUGlyYXRlIiwiaGVpZ2h0IjoiMS44NyIsIndlaWdodCI6Ij8/Iiwib3JpZ2luIjoiRmluYWwgRmFudGFzeSBYSUkiLCJkZXNjcmlwdGlvbiI6IkZyYW4gKOODleODqeODsyBGdXJhbikgaXMgYSBwbGF5YWJsZSBjaGFyYWN0ZXIgaW4gRmluYWwgRmFudGFzeSBYSUkgYW5kIEZpbmFsIEZhbnRhc3kgWElJOiBSZXZlbmFudCBXaW5ncy4gU2hlIGlzIGEgdmllcmEgYW5kIGlzIEJhbHRoaWVyJ3MgcGFydG5lciBhYm9hcmQgaGlzIGFpcnNoaXAsIHRoZSBTdHJhaGwuIEZyYW4gaXMgdGhlIG9ubHkgbm9uLWh1bWUgY2hhcmFjdGVyIGluIHRoZSBtYWluIGNhc3QuIEhlciB0aXRsZSBpcyAnJ01hc3RlciBvZiBXZWFwb25zJycsIGFzIHRoZSB2aWVyYSBhcmUga25vd24gZm9yIHRoZWlyIGV4dHJhb3JkaW5hcnkgY3JhZnRzbWFuc2hpcCwgZ3JhY2UsIGFuZCBpbnRlbGxlY3QuIiwicGljdHVyZXMiOlt7ImlkIjoiNjBjMjQ0ZTUtNDJhNC00YTI4LTg2ZjYtN2JkYjRhMWU3MTNmIiwidXJsIjoiaHR0cHM6Ly9tb29nbGVzdG9yYWdlLmJsb2IuY29yZS53aW5kb3dzLm5ldC9pbWFnZXMvNjBjMjQ0ZTUtNDJhNC00YTI4LTg2ZjYtN2JkYjRhMWU3MTNmLmpwZyIsInByaW1hcnkiOjEsImNvbGxlY3Rpb25JZCI6ImI4NjliNzY0LWZhOGMtNDJhNS0xMDI4LTA4ZDZhZmNhYjNlMiJ9XSwic3RhdHMiOltdfSx7ImlkIjoiY2RhZTdiYmQtOWNlYy00MmJiLTEzN2ItMDhkODRlYzQ1NGJjIiwibmFtZSI6IkZyYW4iLCJqYXBhbmVzZU5hbWUiOm51bGwsImFnZSI6Ij8/IiwiZ2VuZGVyIjoiRmVtYWxlIiwicmFjZSI6IlZpZXJhIiwiam9iIjoiQXR0YWNrZXIiLCJoZWlnaHQiOiI/PyIsIndlaWdodCI6Ij8/Iiwib3JpZ2luIjoiRmluYWwgRmFudGFzeSBCRSIsImRlc2NyaXB0aW9uIjoiQSB3YXJyaW9yIG9mIHRoZSB2aWVyYSwgYSByYWJiaXQtZWFyZWQgcmFjZSwgd2hvc2UgdGFsZSBpcyB0b2xkIGluIHRoZSBkaXN0YW50IHdvcmxkIG9mIEl2YWxpY2UuIEF0eXBpY2FsIG9mIGhlciByZWNsdXNpdmUgcGVvcGxlLCBzaGUgbGVmdCBoZXIgaG9tZWxhbmQgdG8gdmVudHVyZSBpbnRvIGh1bWUgc29jaWV0eSwgd2hlcmUgc2hlIGZpZ2h0cyBhcyB0aGUgdHJ1c3RlZCBjb21yYWRlIG9mIHRoZSBza3kgcGlyYXRlIEJhbHRoaWVyLiBTaGUgaXMgYSBmb3JtaWRhYmxlIGZpZ3VyZSwgcG9zc2Vzc2VkIG9mIGdyZWF0IGtub3dsZWRnZSwgZXhwZXJpZW5jZSwgYW5kIHRoZSBoZWlnaHRlbmVkIHNlbnNpdGl2aXR5IHRvIE1pc3QgdW5pcXVlIHRvIGhlciBraW5kLCBhbmQgcHJvdmlkZXMgY29vbCwgY29uZmlkZW50IGFkdmljZSB0byBoZXIgY29tcGFuaW9ucyB3aGlsZSBrZWVwaW5nIGEgcHJvZmVzc2lvbmFsIGRpc3RhbmNlLiIsInBpY3R1cmVzIjpbeyJpZCI6IjJlZTI5OTYwLTNkYWYtNDU1MS1jY2I0LTA4ZDg0ZWM0NWNjOSIsInVybCI6Imh0dHBzOi8vbW9vZ2xlc3RvcmFnZS5ibG9iLmNvcmUud2luZG93cy5uZXQvaW1hZ2VzLzJlZTI5OTYwLTNkYWYtNDU1MS1jY2I0LTA4ZDg0ZWM0NWNjOS5qcGciLCJwcmltYXJ5IjoxLCJjb2xsZWN0aW9uSWQiOiJjZGFlN2JiZC05Y2VjLTQyYmItMTM3Yi0wOGQ4NGVjNDU0YmMifV0sInN0YXRzIjpbXX1d
+  recorded_at: Tue, 28 Dec 2021 23:09:22 GMT
+recorded_with: VCR 6.0.0
