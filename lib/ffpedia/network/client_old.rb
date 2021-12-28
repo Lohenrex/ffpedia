@@ -1,9 +1,10 @@
-require 'net/http'
-require 'json'
+require "net/http"
+require "json"
 
 class Client
   attr_reader :base_url
-  def initialize()
+
+  def initialize
     @base_url = "https://www.moogleapi.com"
   end
 
@@ -11,7 +12,7 @@ class Client
     # implementation for the http post request
     path = "api/v1/characters/search"
     uri = URI("#{base_url}/#{path}")
-    params = { "#{param }" => value }
+    params = { param.to_s => value }
     res = Net::HTTP.post_form(uri, params)
 
     spotless_json(res.body) if res.is_a?(Net::HTTPSuccess)
@@ -21,14 +22,14 @@ class Client
     # implementation for the http post request
     path = "api/v1/characters/search"
     uri = URI("#{base_url}/#{path}")
-    params = { "#{ search_param }" => value }
+    params = { search_param.to_s => value }
     uri.query = URI.encode_www_form(params)
     res = Net::HTTP.get_response(uri)
 
     spotless_json(res.body) if res.is_a?(Net::HTTPSuccess)
   end
 
-  def get_random_character()
+  def get_random_character
     # implementation for the http get request
     path = "api/v1/characters/random"
     uri = URI("#{base_url}/#{path}")
@@ -37,7 +38,7 @@ class Client
     spotless_json(res.body) if res.is_a?(Net::HTTPSuccess)
   end
 
-  def get_every_character_data()
+  def get_every_character_data
     # implementation for the http get request
     path = "/api/v1/characters"
     uri = URI("#{base_url}/#{path}")
@@ -46,18 +47,18 @@ class Client
     spotless_json(res.body) if res.is_a?(Net::HTTPSuccess)
   end
 
-  def get_jobs()
-    data = filter_json("job", get_every_character_data())
+  def get_jobs
+    data = filter_json("job", get_every_character_data)
     "Here's your jobs list: #{data.join(", ")}"
   end
 
-  def get_races()
-    data = filter_json("race", get_every_character_data())
+  def get_races
+    data = filter_json("race", get_every_character_data)
     "Here's your races list:  #{data.join(", ")}"
   end
 
-  def get_origins()
-    data = filter_json("origin", get_every_character_data())
+  def get_origins
+    data = filter_json("origin", get_every_character_data)
     "Here's your origins list:  #{data.join(", ")}"
   end
 
@@ -102,12 +103,11 @@ class Client
   def delete_character_by(param, value)
     selected_char = search_character(param, value)
     if selected_char.length > 1
-      chars_list = selected_char.map { |x| x[:name]+"(#{x[:origin]})"}.join(", ")
+      chars_list = selected_char.map { |x| x[:name] + "(#{x[:origin]})" }.join(", ")
       "Which one do you want to delete? #{chars_list}"
     else
       delete_character(selected_char.first[:id])
     end
-
   end
 
   private
@@ -119,6 +119,6 @@ class Client
   end
 
   def filter_json(filter, json)
-    json.map { |char| char[:"#{filter}"]}.uniq.to_a.sort_by! {|el| el.downcase }
+    json.map { |char| char[:"#{filter}"] }.uniq.to_a.sort_by! { |el| el.downcase }
   end
 end

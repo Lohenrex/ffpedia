@@ -1,9 +1,10 @@
-require 'net/http'
-require 'json'
+require "net/http"
+require "json"
 
 module Ffpedia
   class Client
     attr_reader :base_url
+
     def initialize(base_url)
       @base_url = base_url
     end
@@ -52,10 +53,10 @@ module Ffpedia
       uri.query = query_items(**params)
       uri
     end
+
     def query_items(**options)
       query_items = options.fetch(:query, {}).compact
       URI.encode_www_form(query_items)
     end
-
   end
 end

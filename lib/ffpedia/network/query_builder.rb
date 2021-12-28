@@ -1,5 +1,6 @@
 # frozen_string_literal: true
-require 'json'
+
+require "json"
 
 module Ffpedia
   # API request query builder
@@ -17,7 +18,7 @@ module Ffpedia
     end
 
     def find_by(search_param, value)
-      params = { "#{ search_param }" => value }
+      params = { search_param.to_s => value }
       client.get("#{endpoint_name}/search", query: params)
     end
 
@@ -30,7 +31,7 @@ module Ffpedia
     end
 
     def filter_json(filter, json)
-      json.map { |char| char[:"#{filter}"]}.uniq.to_a.sort_by! {|el| el.downcase }
+      json.map { |char| char[:"#{filter}"] }.uniq.to_a.sort_by! { |el| el.downcase }
     end
   end
 end

@@ -30,19 +30,19 @@ module Ffpedia
   end
 
   def self.characters_by_game(game)
-    Character.new.find_by('origin', game)
+    Character.new.find_by("origin", game)
   end
 
   def self.characters_by_name(character)
-    Character.new.find_by('name', character)
+    Character.new.find_by("name", character)
   end
 
   def self.characters_by_race(race)
-    Character.new.find_by('race', race)
+    Character.new.find_by("race", race)
   end
 
   def self.characters_by_job(job)
-    Character.new.find_by('job', job)
+    Character.new.find_by("job", job)
   end
 
   def self.games
@@ -62,7 +62,7 @@ module Ffpedia
   end
 
   def self.monsters_by_name(monster)
-    Monster.new.find_by('name', monster)
+    Monster.new.find_by("name", monster)
   end
 
   def self.jobs

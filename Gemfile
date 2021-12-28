@@ -12,11 +12,9 @@ gem "minitest", "~> 5.0"
 gem "rubocop", "~> 1.21"
 
 group :test do
-	
   gem "vcr"
 
   gem "webmock"
-
 end
 gem "rubocop-minitest", "~> 0.17.0"
 
