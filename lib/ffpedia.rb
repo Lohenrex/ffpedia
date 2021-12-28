@@ -41,6 +41,10 @@ module Ffpedia
     Character.new.find_by('race', race)
   end
 
+  def self.characters_by_job(job)
+    Character.new.find_by('job', job)
+  end
+
   def self.games
     Game.new.all
   end
