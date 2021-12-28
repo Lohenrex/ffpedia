@@ -18,3 +18,6 @@ group :test do
   gem "webmock"
 
 end
+gem "rubocop-minitest", "~> 0.17.0"
+
+gem "rubocop-rake", "~> 0.6.0"
