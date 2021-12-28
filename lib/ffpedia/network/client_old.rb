@@ -31,7 +31,7 @@ class Client
     spotless_json(res.body) if res.is_a?(Net::HTTPSuccess)
   end
 
-  def get_random_character
+  def random_character
     # implementation for the http get request
     path = "api/v1/characters/random"
     uri = URI("#{base_url}/#{path}")
@@ -40,7 +40,7 @@ class Client
     spotless_json(res.body) if res.is_a?(Net::HTTPSuccess)
   end
 
-  def get_every_character_data
+  def every_character_data
     # implementation for the http get request
     path = "/api/v1/characters"
     uri = URI("#{base_url}/#{path}")
@@ -49,57 +49,37 @@ class Client
     spotless_json(res.body) if res.is_a?(Net::HTTPSuccess)
   end
 
-  def get_jobs
+  def jobs
     data = filter_json("job", get_every_character_data)
     "Here's your jobs list: #{data.join(", ")}"
   end
 
-  def get_races
+  def races
     data = filter_json("race", get_every_character_data)
     "Here's your races list:  #{data.join(", ")}"
   end
 
-  def get_origins
+  def origins
     data = filter_json("origin", get_every_character_data)
     "Here's your origins list:  #{data.join(", ")}"
   end
 
   def update_character(id, updated_char)
-    # implementation for the http put request
     uri = URI("#{base_url}/api/v1/characters/update")
     params = { "id" => id, "updated_char" => updated_char }
     req = Net::HTTP::Put.new(uri)
     req.set_form_data(params)
-
-    res = Net::HTTP.start(uri.hostname, uri.port) do |http|
-      http.request(req)
-    end
-
-    case res
-    when Net::HTTPSuccess
-      "Character succesfully updated!"
-    else
-      res.value
-    end
+    res = Net::HTTP.start(uri.hostname, uri.port) { |http| http.request(req) }
+    res.is_a?(Net::HTTPSuccess) ? "Character succesfully updated!" : res.value
   end
 
   def delete_character(id)
-    # implementation for the http delete request
     uri = URI("#{base_url}/api/v1/characters/delete")
     params = { "id" => id }
     req = Net::HTTP::Delete.new(uri)
     req.set_form_data(params)
-
-    res = Net::HTTP.start(uri.hostname, uri.port) do |http|
-      http.request(req)
-    end
-
-    case res
-    when Net::HTTPSuccess
-      "Character succesfully deleted!"
-    else
-      res.value
-    end
+    res = Net::HTTP.start(uri.hostname, uri.port) { |http| http.request(req) }
+    res.is_a?(Net::HTTPSuccess) ? "Character succesfully deleted!" : res.value
   end
 
   def delete_character_by(param, value)
