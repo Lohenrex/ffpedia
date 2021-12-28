@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "net/http"
 require "json"
 
@@ -119,6 +121,6 @@ class Client
   end
 
   def filter_json(filter, json)
-    json.map { |char| char[:"#{filter}"] }.uniq.to_a.sort_by! { |el| el.downcase }
+    json.map { |char| char[:"#{filter}"] }.uniq.to_a.sort_by!(&:downcase)
   end
 end

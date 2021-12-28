@@ -27,11 +27,11 @@ module Ffpedia
     attr_reader :client
 
     def endpoint_name
-      @endpoint_name = self.class.name.split("::")[-1].downcase + "s"
+      @endpoint_name = "#{self.class.name.split("::")[-1].downcase}s"
     end
 
     def filter_json(filter, json)
-      json.map { |char| char[:"#{filter}"] }.uniq.to_a.sort_by! { |el| el.downcase }
+      json.map { |char| char[:"#{filter}"] }.uniq.to_a.sort_by!(&:downcase)
     end
   end
 end
