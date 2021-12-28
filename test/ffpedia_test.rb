@@ -15,18 +15,10 @@ class FfpediaTest < Minitest::Test
     end
   end
 
-  def test_count_all_characters
-    VCR.use_cassette("characters_count") do
-      count = Ffpedia.characters_count
-      assert_instance_of Integer, count
-    end
-  end
-
   def test_character_exists
     VCR.use_cassette("character") do
       character = Ffpedia.character("66000ff6-e1ab-40a8-0fdc-08d6afcab3e2")
       assert_equal "66000ff6-e1ab-40a8-0fdc-08d6afcab3e2", character.first.fetch(:id)
-      assert_instance_of Hash, character.first
     end
   end
 
