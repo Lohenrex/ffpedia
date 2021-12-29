@@ -16,7 +16,10 @@ module Ffpedia
       # benchmark using fibers: 10s
       # Since this API does not have pagination, there is no actual advantage using fibers or threads
       response = []
-      f = Fiber.new { response = client.get(endpoint_name); Fiber.yield; }
+      f = Fiber.new do
+        response = client.get(endpoint_name)
+        Fiber.yield
+      end
       f.resume
       response
     end
