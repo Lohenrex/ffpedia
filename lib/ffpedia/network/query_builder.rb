@@ -10,7 +10,15 @@ module Ffpedia
     end
 
     def all
-      client.get(endpoint_name)
+      # benchmark: 10s
+      # client.get(endpoint_name)
+
+      # benchmark using fibers: 10s
+      # Since this API does not have pagination, there is no actual advantage using fibers or threads
+      response = []
+      f = Fiber.new { response = client.get(endpoint_name); Fiber.yield; }
+      f.resume
+      response
     end
 
     def find(id)
