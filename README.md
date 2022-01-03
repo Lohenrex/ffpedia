@@ -2,7 +2,7 @@
 
 ***THIS IS A WORK IN PROGRESS.***
 
-This gem is a wrapper for the Final Fantasy API at [GitHub Pages](https://www.moogleapi.com). To experiment with that code, run `bin/console` for an interactive prompt.
+This gem is a wrapper for the Final Fantasy API at [Moogle API](https://www.moogleapi.com). To experiment with that code, run `bin/console` for an interactive prompt.
 
 ## Installation
 
