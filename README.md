@@ -30,7 +30,7 @@ Ffpedia.characters
 ### Available methods
 #### Characters
 * characters: Retrieve a list of every character in the API's database. (Array)
-* characters_count: Get the count of avaiable characters. (Integer)
+* characters_count: Get the count of available characters. (Integer)
 * character(id): Find a character by its id. (Hash)
 * random_character: Get a random character. (Hash)
 * characters_by_game(game): Retrieve a list of characters filtered by the game where they are featured in. (Array)
